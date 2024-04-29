@@ -1,8 +1,9 @@
-import Map from 'https://cdn.skypack.dev/ol/7.14.0/Map.js';
-import View from 'https://cdn.skypack.dev/ol/7.14.0/View.js';
-import TileLayer from 'https://cdn.skypack.dev/ol/7.14.0/layer/Tile.js';
-import OSM from 'https://cdn.skypack.dev/ol/7.14.0/source/OSM.js';
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
 
+// Create a map instance
 const map = new Map({
     target: 'map',
     layers: [
