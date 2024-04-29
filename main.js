@@ -1,18 +1,19 @@
-import Map from 'ol/Map';
-import View from 'ol/View';
-import TileLayer from 'ol/layer/Tile';
-import OSM from 'ol/source/OSM';
+import Map from 'https://cdn.skypack.dev/ol/Map.js';
+import View from 'https://cdn.skypack.dev/ol/View.js';
+import TileLayer from 'https://cdn.skypack.dev/ol/layer/Tile.js';
+import XYZ from 'https://cdn.skypack.dev/ol/source/XYZ.js';
 
-// Create a map instance
-const map = new Map({
+new Map({
     target: 'map',
     layers: [
         new TileLayer({
-            source: new OSM()
+            source: new XYZ({
+                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
         })
     ],
     view: new View({
-        center: [0, 0],
-        zoom: 2
+        center: [106.8272, -6.2088], // Koordinat Kota Jakarta, Indonesia
+        zoom: 6 // Perbesar agar Kota Jakarta terlihat dengan jelas
     })
 });
